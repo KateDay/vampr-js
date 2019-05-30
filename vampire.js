@@ -51,13 +51,18 @@ class Vampire {
     let currentVampire = this;
 
     while (currentVampire) {
-      if (name === Vampire.name) {
-        return name;
+      if (name === currentVampire.name) {
+        return currentVampire.name;
       } else {
         return null;
       }
     }
     
+    for (const child of this.offspring) {
+      const children = child.vampireWithName(this);
+      children = children.currentVampire;
+    }
+
   }
 
   // Returns the total number of vampires that exist
