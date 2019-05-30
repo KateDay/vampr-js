@@ -10,6 +10,8 @@ describe("Vampire", function() {
     rootVampire = new Vampire("root");
   });
 
+ 
+
   describe("isMoreSeniorThan", () => {
 
     let offspring1, offspring2, offspring3, offspring4;
